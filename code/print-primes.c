@@ -15,11 +15,11 @@ int primeamount=0;
 
 void print_number(int n){
   //i < n eller i == n?
-      printf("%10d ", n);
-    if(primeamount % COLUMNS ==0){
+    if(primeamount % COLUMNS ==0 && primeamount != 0){
       columncheck++;
       printf("\n");
   }
+  printf("%10d ", n);
 }
 
 int is_prime(int n){
@@ -54,17 +54,6 @@ void print_primes(int n){
       primeamount++;
     }
   }
-//   printf("%10d ", 2);
-//   printf("%10d ", 3);
-//   printf("%10d ", 5);
-//   printf("%10d ", 7);
-//   printf("%10d ", 11);
-//   printf("%10d ", 13);
-//   printf("\n");
-//   printf("%10d ", 17);
-//   printf("%10d ", 19);
-
-//   printf("\n");
 }
 // 'argc' contains the number of program arguments, and
 // 'argv' is an array of char pointers, where each
