@@ -10,13 +10,11 @@
 #include <stdlib.h>
 
 #define COLUMNS 6
-int columncheck=0;
 int primeamount=0;
 
 void print_number(int n){
   //i < n eller i == n?
     if(primeamount % COLUMNS ==0 && primeamount != 0){
-      columncheck++;
       printf("\n");
   }
   printf("%10d ", n);
@@ -51,7 +49,7 @@ void print_primes(int n){
   for(int i = 0; i < n; i++){
     if(is_prime(i)==1){
       print_number(i);
-      primeamount++;
+      primeamount++;    //+1 if we have a prime
     }
   }
 }
