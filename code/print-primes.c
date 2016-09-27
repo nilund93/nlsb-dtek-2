@@ -13,7 +13,8 @@
 int primeamount=0;
 
 void print_number(int n){
-  //i < n eller i == n?
+  //Om antalet primtal är delbart med antalet kollumner
+  //printa en ny rad
     if(primeamount % COLUMNS ==0 && primeamount != 0){
       printf("\n");
   }
