@@ -55,9 +55,9 @@ void print_sieves(int n){
 }
 
 int main(int argc, char *argv[]){
-  if(argc == 2)
-    print_sieves(atoi(argv[1]));
-  else
-    printf("Please state an interger number.\n");
-  return 0;
+	if(argc == 2)
+		print_sieves(atoi(argv[1]));
+	else
+		printf("Please state an interger number.\n");
+	return 0;
 }
