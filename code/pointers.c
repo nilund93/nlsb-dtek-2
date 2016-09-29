@@ -15,8 +15,8 @@ int list2[20];
 int copycodes(char* textstr, int* list, int* counter){
   while(*textstr != 0){
     *list = *textstr;
-    ++textstr;
-    ++list;
+    textstr++;
+    list++;
     ++*counter;
     }
 }
