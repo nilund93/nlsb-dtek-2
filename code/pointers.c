@@ -9,8 +9,8 @@ char* text2 = "Yet another thing.";
 //Vi ska deklarera variablerna list1, list2 och counter själva.
 int count=0;
 int *pCount = &count;
-int list1[20];
-int list2[20];
+int list1[20];    //assembler counts in bits
+int list2[20];    //c counts in words
 
 int copycodes(char* textstr, int* list, int* counter){
   while(*textstr != 0){

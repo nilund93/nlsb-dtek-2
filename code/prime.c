@@ -7,25 +7,26 @@
 
 
 #include <stdio.h>
+#include <math.h>	
 
 int is_prime(int n){
 	//Skriv om denna kod så att det returneras en etta ifall det är ett primtal
 	//och en nolla om det inte är det.
 	//Använd endast enkla loopar och if-satser
-	int flag;
-	for(int i=2; i <= n/2; ++i){
+	int flag=1;
+	for(int i=2; i <= sqrt(n); i++){
 		//Om delbart så är det ej ett primtal
 		if(n % i == 0){
 
-			flag = 1;
+			flag = 0;
 			break;
 		}
 		else{
-			flag = 0;
+			flag = 1;
 		}
 	}
 	//Om flaggad, alltså ett primtal, returnera 1.
-	if(flag == 0 && n != 0 && n != 1){
+	if(flag == 1 && n != 0 && n != 1){
 		return 1;
 	}
 	else{

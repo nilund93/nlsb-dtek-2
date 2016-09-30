@@ -13,7 +13,7 @@
 int columncheck=0;
 
 void print_number(int n){
-  //i < n eller i == n?
+	
     if(columncheck % COLUMNS ==0 && columncheck != 0){
       printf("\n");
   	}
@@ -34,21 +34,21 @@ void print_sieves(int n){
 
 		print all i in A[i] == 1
 		*/
-	int intArray[n];
+	int prime[n];
 	for(int i = 2; i < n; i++){ //start on 2.
-		intArray[i] = 1;	//Fill every position with ones
+		prime[i] = 1;	//Fill every position with ones
 	}
 
 	for (int i = 2; i < sqrt(n); i++){
-		if(intArray[i] == 1){
+		if(prime[i] == 1){
 			for(int j = i*i; j < n; j = j + i){
-				intArray[j] = 0;
+				prime[j] = 0;
 			}
 		
 		}
 	}
 	for(int i=0; i < n; i++){
-		if(intArray[i]==1){
+		if(prime[i]==1){
       			print_number(i);
       	}
 	}

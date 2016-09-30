@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>  
 
 #define COLUMNS 6
 int primeamount=0;
@@ -22,26 +23,27 @@ void print_number(int n){
 }
 
 int is_prime(int n){
-  int flag;
-  for(int i=2; i <= n/2; ++i){
+  int flag=1;
+  for(int i=2; i <= sqrt(n); i++){
     //Om delbart så är det ej ett primtal
     if(n % i == 0){
 
-      flag = 1;
+      flag = 0;
       break;
     }
     else{
-      flag = 0;
+      flag = 1;
     }
   }
   //Om flaggad, alltså ett primtal, returnera 1.
-  if(flag == 0 && n != 0 && n != 1){
+  if(flag == 1 && n != 0 && n != 1){
     return 1;
   }
   else{
     return 0;
   }
 }
+
 void print_primes(int n){
   // Should print out all prime numbers less than 'n'
   // with the following formatting. Note that

@@ -13,10 +13,8 @@
 
 #define COLUMNS 6
 int columncheck=0;
-int primeamount=0;
 
 void print_number(int n){
-  //i < n eller i == n?
     if(columncheck % COLUMNS ==0 && columncheck != 0){
       printf("\n");
   	}
@@ -30,8 +28,7 @@ void print_sieves(int n){
 		https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Pseudocode
 		*/
 	int *prime;
-	//Using the max stack size, this is approx. 8 mb
-	prime = malloc(200000 * sizeof(int));
+	prime = malloc(n * sizeof(int));
 	if(!prime){
 		printf("%s\n", "Not enough memory" );
 	}
