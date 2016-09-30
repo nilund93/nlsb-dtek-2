@@ -28,7 +28,7 @@ void print_sieves(int n){
 		https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Pseudocode
 		*/
 	int *prime;
-	prime = malloc(n * sizeof(int));
+	prime = malloc(n * sizeof(char));
 	if(!prime){
 		printf("%s\n", "Not enough memory" );
 	}

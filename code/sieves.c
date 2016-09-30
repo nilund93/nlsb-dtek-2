@@ -11,6 +11,7 @@
 
 #define COLUMNS 6
 int columncheck=0;
+int distancecounter = 0;
 
 void print_number(int n){
 	
@@ -34,7 +35,7 @@ void print_sieves(int n){
 
 		print all i in A[i] == 1
 		*/
-	int prime[n];
+	char prime[n];
 	for(int i = 2; i < n; i++){ //start on 2.
 		prime[i] = 1;	//Fill every position with ones
 	}
@@ -47,11 +48,21 @@ void print_sieves(int n){
 		
 		}
 	}
-	for(int i=0; i < n; i++){
+
+	
+	int oldprime;
+	int newprime;
+	for(int i=2; i < n; i++){
 		if(prime[i]==1){
-      			print_number(i);
+			newprime = i;
+			if(newprime - oldprime == 8){
+				distancecounter++;
+			}
+			print_number(i);
+			oldprime = i;
       	}
 	}
+	printf("\nThe amount of times the distance was 8 between primes was: %d\n", distancecounter);
 }
 
 int main(int argc, char *argv[]){

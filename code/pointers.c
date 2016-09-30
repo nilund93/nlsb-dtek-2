@@ -8,7 +8,6 @@ char* text2 = "Yet another thing.";
 
 //Vi ska deklarera variablerna list1, list2 och counter själva.
 int count=0;
-int *pCount = &count;
 int list1[20];    //assembler counts in bits
 int list2[20];    //c counts in words
 
@@ -21,10 +20,8 @@ int copycodes(char* textstr, int* list, int* counter){
     }
 }
 void work(){
-  int* listpointer1 = list1;
-  int* listpointer2 = list2;
-  copycodes(text1, listpointer1, pCount);
-  copycodes(text2, listpointer2, pCount);
+  copycodes(text1, list1, &count);
+  copycodes(text2, list2, &count);
 }
 
 void printlist(const int* lst){
